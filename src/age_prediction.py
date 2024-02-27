@@ -12,7 +12,7 @@ from tensorflow.keras.models import load_model
 
 
 def predict_age(file,sexe):
-    model_path = "../modeles/best_women_24loc.h5" if sexe == "femme" else "..modeles/best_mmen_24loc.h5"
+    model_path = "../modeles/best_women_24loc.h5" if sexe == "femme" else "..modeles/best_men_24loc.h5"
     model = load_model(model_path) 
     predictions = model.predict(extract_vectors(file,sexe))
     predictions = np.argmax(predictions, axis = 1)
