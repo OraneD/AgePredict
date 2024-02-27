@@ -14,9 +14,9 @@ from tensorflow.keras.models import load_model
 def predict_age(file,sexe):
 
     model = load_model("../modeles/best_women_24loc.h5") 
-    predictions = model.predict(extract_vectors(file,"homme"))
+    predictions = model.predict(extract_vectors(file,sexe))
     predictions = np.argmax(predictions, axis = 1)
     print((predictions))
     
-    age = "jeune" if predictions == [0] else "vieux"
+    age = "- de 30 ans" if predictions == [0] else "+ de 60 ans"
     return age
