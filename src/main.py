@@ -13,6 +13,11 @@ from age_prediction import predict_age
 
 app = FastAPI()
 
+"""
+API et fonctions asynchrones
+CSS directement inclus dans le code HTML
+"""
+
 @app.get("/", response_class=HTMLResponse)
 async def main():
     content = """

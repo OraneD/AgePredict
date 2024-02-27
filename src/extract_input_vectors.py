@@ -15,7 +15,8 @@ from transformers import Wav2Vec2Processor
 import numpy as np
 
 """
-Ce script permet de transformer l'input de l'utilisateur en vecteur
+Ce script permet de transformer l'input de l'utilisateur en vecteur,
+conforme à ceux utilisés en entraînement
 """
 def extract_vectors(file,sexe):
     layer = 5 if sexe == "homme" else 0
