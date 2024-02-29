@@ -28,7 +28,7 @@ async def main():
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Prédiction d'âge</title>
+    <title>AgePredict</title>
     <style>
         body {{
             display: flex;
