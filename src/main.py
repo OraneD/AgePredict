@@ -80,7 +80,7 @@ async def main():
     <h1>AgePredict</h1>
     <p>Score actuel du modèle : {score:.2f}% sur {nb_fichier} locuteurs</p>
     <div class="instructions">
-        Veuillez entrer un fichier audio de 2 à 10 secondes.
+        Veuillez entrer un fichier audio de 2 à 10 secondes (locuteur -30 ou +60 ans).
     </div>
     <form id="uploadForm" action="/uploadfile/" enctype="multipart/form-data" method="post">
         <input name="file" type="file">
