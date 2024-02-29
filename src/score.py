@@ -20,8 +20,7 @@ def write_to_csv(predicted_age, real_age):
         if real_age is not None:
            correct = (predicted_age == real_age_category(real_age))
         else:
-           correct = 'N/A'  # Utilisez 'N/A' ou une autre valeur pour indiquer l'absence de comparaison
-
+           correct = 'N/A' 
         writer.writerow({'predicted_age': predicted_age, 'real_age': real_age if real_age is not None else 'N/A', 'correct': correct})
 
         
@@ -32,7 +31,7 @@ def calculate_model_score():
         with open('predictions.csv', 'r') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                if row['correct'] not in ['N/A', '']:  # Ignorez les entrées sans âge réel
+                if row['correct'] not in ['N/A', '']:  
                     total_comparable_predictions += 1
                     if row['correct'] == 'True':
                         correct_predictions += 1
